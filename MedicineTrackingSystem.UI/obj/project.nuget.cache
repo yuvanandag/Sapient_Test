@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "pR8FlrcxMOBPrG91yxQEIixTNydTbpCX1o9ekM9m1dbyNeK/7wyWdJ9gIuUuHNQMPI+sAYTOCCodkrFlQYXr5w==",
+  "success": true,
+  "projectFilePath": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.UI\\MedicineTrackingSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yuvan\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

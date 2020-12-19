@@ -1,0 +1,9 @@
+{
+  "Id": 0,
+  "MedicineFullName": "string",
+  "Brand": "string",
+  "Price": 0.0,
+  "Quantity": 0,
+  "ExpiryDate": "2020-12-17T17:02:26.215Z",
+  "Notes": "string"
+}

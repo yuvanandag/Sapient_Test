@@ -1,0 +1,11 @@
+body{
+
+    background-color: #eee; 
+}
+tr.bg_yellow td{background-color: yellow !important;}
+tr.bg_red td{background-color: red !important;}
+.bg_form {
+    background: #fff;
+    padding: 15px;
+    border-radius: 4px;
+}

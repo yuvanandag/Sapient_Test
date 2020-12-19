@@ -1,0 +1,14 @@
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Repository\obj\Debug\netstandard2.0\MedicineTrackingSystem.Repository.AssemblyInfoInputs.cache
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Repository\obj\Debug\netstandard2.0\MedicineTrackingSystem.Repository.AssemblyInfo.cs
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Repository\obj\Debug\netstandard2.0\MedicineTrackingSystem.Repository.csproj.CoreCompileInputs.cache
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Repository\bin\Debug\netstandard2.0\MedicineTrackingSystem.Repository.deps.json
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Repository\bin\Debug\netstandard2.0\MedicineTrackingSystem.Repository.dll
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Repository\bin\Debug\netstandard2.0\MedicineTrackingSystem.Repository.pdb
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Repository\bin\Debug\netstandard2.0\MedicineTrackingSystem.DataAccess.dll
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Repository\bin\Debug\netstandard2.0\MedicineTrackingSystem.Models.dll
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Repository\bin\Debug\netstandard2.0\MedicineTrackingSystem.DataAccess.pdb
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Repository\bin\Debug\netstandard2.0\MedicineTrackingSystem.Models.pdb
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Repository\obj\Debug\netstandard2.0\MedicineTrackingSystem.Repository.csprojAssemblyReference.cache
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Repository\obj\Debug\netstandard2.0\MedicineTrackingSystem.Repository.csproj.CopyComplete
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Repository\obj\Debug\netstandard2.0\MedicineTrackingSystem.Repository.dll
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Repository\obj\Debug\netstandard2.0\MedicineTrackingSystem.Repository.pdb

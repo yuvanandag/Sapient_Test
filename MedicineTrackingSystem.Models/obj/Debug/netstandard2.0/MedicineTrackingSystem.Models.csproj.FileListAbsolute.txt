@@ -1,0 +1,9 @@
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Models\bin\Debug\netstandard2.0\MedicineTrackingSystem.Models.deps.json
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Models\bin\Debug\netstandard2.0\MedicineTrackingSystem.Models.dll
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Models\bin\Debug\netstandard2.0\MedicineTrackingSystem.Models.pdb
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Models\obj\Debug\netstandard2.0\MedicineTrackingSystem.Models.AssemblyInfoInputs.cache
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Models\obj\Debug\netstandard2.0\MedicineTrackingSystem.Models.AssemblyInfo.cs
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Models\obj\Debug\netstandard2.0\MedicineTrackingSystem.Models.csproj.CoreCompileInputs.cache
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Models\obj\Debug\netstandard2.0\MedicineTrackingSystem.Models.dll
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Models\obj\Debug\netstandard2.0\MedicineTrackingSystem.Models.pdb
+E:\Sapient\MedicineTrackingSystem\MedicineTrackingSystem.Models\obj\Debug\netstandard2.0\MedicineTrackingSystem.Models.csprojAssemblyReference.cache
