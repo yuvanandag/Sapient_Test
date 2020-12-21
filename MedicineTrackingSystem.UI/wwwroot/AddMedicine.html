@@ -20,6 +20,7 @@
                     <div class="row">
                         <div class="col">
                             <h4>Add Medicine Details</h4>
+                            <input type="hidden" id="hdnMedicineId" />
                         </div>
                     </div>
                     <div class="row bg_form">
@@ -98,31 +99,71 @@
             integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
             crossorigin="anonymous"></script>
     <script>
+
+        $(document).ready(function () {
+            var currentURL = document.URL;
+            var urlQueryParameters = currentURL.split('?');
+            var id = urlQueryParameters.length > 1 ? urlQueryParameters[1] : null;
+            if (id != null && id.split('=').length > 1) {
+                var medicineId = id.split('=')[1];
+                $(document).ready(function () {
+                    fetch("http://localhost:62790/api/Medicine/" + parseInt(medicineId, 10)).then(res => {
+                        return res.json();
+                    }).then(data => populateGridData(data))
+                        .catch(error => handleException(null, error, null));
+                });
+            }
+            else {
+                $('#addButton').html('Add Medicine');
+            }
+        });
+
+        function populateGridData(data) {
+            $('#hdnMedicineId').val(data.id);
+            //$('#txtMedicineFullName').attr('readonly', true);
+            $("#txtMedicineFullName").val(data.medicineFullName);
+            //$('#txtBrand').attr('readonly', true);
+            $("#txtBrand").val(data.brand);
+            //$('#txtPrice').attr('readonly', true);
+            $("#txtPrice").val(data.price);
+            //$('#txtQuantity').attr('readonly', true);
+            $("#txtQuantity").val(data.quantity);
+            //$('#txtExpiryDate').attr('readonly', true);
+            $("#txtExpiryDate").val(data.expiryDate.split('T')[0]);
+            $("#txtNotes").val(data.notes);
+            $('#addButton').html('Update Medicine');
+        }
+
         $('#addButton').click(function () {
-            debugger;
-            const medicine = {
+            var url = '';
+            var method = 'POST';
+            var medicineData = {
                 MedicineFullName: $('#txtMedicineFullName').val(),
                 Brand: $('#txtBrand').val(),
-                Price: $('#txtPrice').val(),
-                Quantity: $('#txtQuantity').val(),
-                ExpiryDate: $('#txtExpiryDate').val(),
-                Notes: $('#txtNotes').val(),
+                Price: parseFloat($('#txtPrice').val()),
+                Quantity: parseInt($('#txtQuantity').val(), 10),
+                ExpiryDate: new Date($('#txtExpiryDate').val()),
+                Notes: $('#txtNotes').val()
+            };
+            if ($('#hdnMedicineId').val() != null) {
+                method = 'PUT';
+                medicineData.Id = parseInt($('#hdnMedicineId').val());
+                url = "http://localhost:62790/api/Medicine";
             }
-
-            var medicinJsn = JSON.stringify(medicine);
-            $.ajax({
-                url: "http://localhost:62790/api/Medicine",
-                type: 'POST',
-                Accept: 'application/json',
-                contentType: "application/json;  charset=utf-8",
-                data: medicinJsn,
-                success: function (medicineStatus) {
-                    medicineAddSuccess(medicineStatus);
+            else {
+                url = "http://localhost:62790/api/Medicine";
+            }
+            debugger;
+            fetch(url, {
+                method: method,
+                headers: {
+                    'Content-Type': 'application/json'
                 },
-                error: function (request, message, error) {
-                    handleException(request, message, error);
-                }
-            });
+                body: JSON.stringify(medicineData)
+            }).then(res => {
+                return res.json();
+            }).then(data => console.log(data))
+                .catch(error => console.log(error));
         });
 
         function medicineAddSuccess(medicineStatus) {

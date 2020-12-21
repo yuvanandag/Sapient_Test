@@ -135,11 +135,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.UI\\MedicineTrackingSystem.csproj",
+      "projectUniqueName": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.UI\\MedicineTrackingSystem.csproj",
       "projectName": "MedicineTrackingSystem",
-      "projectPath": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.UI\\MedicineTrackingSystem.csproj",
+      "projectPath": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.UI\\MedicineTrackingSystem.csproj",
       "packagesPath": "C:\\Users\\yuvan\\.nuget\\packages\\",
-      "outputPath": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.UI\\obj\\",
+      "outputPath": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.UI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -159,8 +159,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj": {
-              "projectPath": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj"
+            "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj": {
+              "projectPath": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj"
             }
           }
         }

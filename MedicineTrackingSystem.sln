@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedicineTrackingSystem", "M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedicineTrackingSystem.Models", "MedicineTrackingSystem.Models\MedicineTrackingSystem.Models.csproj", "{36051326-F544-48F1-9EDE-DCB27EB60FEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicineTrackingSystem.Repository", "MedicineTrackingSystem.Repository\MedicineTrackingSystem.Repository.csproj", "{A5AF6E9E-9020-47C1-AAB7-1B3D391DE035}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedicineTrackingSystem.Repository", "MedicineTrackingSystem.Repository\MedicineTrackingSystem.Repository.csproj", "{A5AF6E9E-9020-47C1-AAB7-1B3D391DE035}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicineTrackingSystem.DataAccess", "MedicineTrackingSystem.DataAccess\MedicineTrackingSystem.DataAccess.csproj", "{FAB20824-6AC0-4525-868F-D54B1CCB7D78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedicineTrackingSystem.DataAccess", "MedicineTrackingSystem.DataAccess\MedicineTrackingSystem.DataAccess.csproj", "{FAB20824-6AC0-4525-868F-D54B1CCB7D78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

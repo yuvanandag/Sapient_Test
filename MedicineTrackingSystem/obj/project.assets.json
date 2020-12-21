@@ -5524,11 +5524,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem\\MedicineTrackingSystem.API.csproj",
+      "projectUniqueName": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem\\MedicineTrackingSystem.API.csproj",
       "projectName": "MedicineTrackingSystem.API",
-      "projectPath": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem\\MedicineTrackingSystem.API.csproj",
+      "projectPath": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem\\MedicineTrackingSystem.API.csproj",
       "packagesPath": "C:\\Users\\yuvan\\.nuget\\packages\\",
-      "outputPath": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem\\obj\\",
+      "outputPath": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5548,11 +5548,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj": {
-              "projectPath": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj"
+            "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj": {
+              "projectPath": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj"
             },
-            "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.Repository\\MedicineTrackingSystem.Repository.csproj": {
-              "projectPath": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.Repository\\MedicineTrackingSystem.Repository.csproj"
+            "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.Repository\\MedicineTrackingSystem.Repository.csproj": {
+              "projectPath": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.Repository\\MedicineTrackingSystem.Repository.csproj"
             }
           }
         }

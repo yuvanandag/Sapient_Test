@@ -21,17 +21,19 @@ namespace MedicineTrackingSystem
         }
 
         public IConfiguration Configuration { get; }
-        //readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        readonly string _SpecificOrigin = "_SpecificOrigin";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors(options =>
             {
-                options.AddPolicy("ApiCorsPolicy",
-                    builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+                options.AddPolicy("_SpecificOrigin",
+                    builder => builder.AllowAnyOrigin()
+                                      .AllowAnyMethod()
+                                      .AllowAnyHeader());
             });
-            services.AddMvc();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddControllers();
             services.AddDbContext<AppDBContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("AppDBConnection")));
@@ -66,9 +68,9 @@ namespace MedicineTrackingSystem
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseCors(builder => builder.AllowAnyOrigin());
-            app.UseCors("ApiCorsPolicy");
-            app.UseMvc();
+            app.UseCors(_SpecificOrigin);
+            app.UseHttpsRedirection();
+
             app.UseRouting();
 
             app.UseAuthorization();

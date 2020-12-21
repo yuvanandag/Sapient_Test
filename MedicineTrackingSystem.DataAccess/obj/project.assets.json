@@ -6200,11 +6200,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.DataAccess\\MedicineTrackingSystem.DataAccess.csproj",
+      "projectUniqueName": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.DataAccess\\MedicineTrackingSystem.DataAccess.csproj",
       "projectName": "MedicineTrackingSystem.DataAccess",
-      "projectPath": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.DataAccess\\MedicineTrackingSystem.DataAccess.csproj",
+      "projectPath": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.DataAccess\\MedicineTrackingSystem.DataAccess.csproj",
       "packagesPath": "C:\\Users\\yuvan\\.nuget\\packages\\",
-      "outputPath": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.DataAccess\\obj\\",
+      "outputPath": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6224,8 +6224,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj": {
-              "projectPath": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj"
+            "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj": {
+              "projectPath": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj"
             }
           }
         }

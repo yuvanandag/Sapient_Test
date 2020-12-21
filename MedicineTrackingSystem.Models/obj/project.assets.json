@@ -286,11 +286,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj",
+      "projectUniqueName": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj",
       "projectName": "MedicineTrackingSystem.Models",
-      "projectPath": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj",
+      "projectPath": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.Models\\MedicineTrackingSystem.Models.csproj",
       "packagesPath": "C:\\Users\\yuvan\\.nuget\\packages\\",
-      "outputPath": "E:\\Sapient\\MedicineTrackingSystem\\MedicineTrackingSystem.Models\\obj\\",
+      "outputPath": "E:\\A_Tech_Interview\\Attended\\Sapient_Test\\MedicineTrackingSystem.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
