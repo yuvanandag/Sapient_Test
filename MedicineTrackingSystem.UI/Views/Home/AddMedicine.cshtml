@@ -1,0 +1,202 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section>
+    <div class="container mt-4">
+        <div class="header_wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h4>Add Medicine Details</h4>
+                        <input type="hidden" id="hdnMedicineId" />
+                    </div>
+                </div>
+                <div class="messagealert" id="alert_container">
+                </div>
+                <div class="row bg_form">
+                    <div class="col">
+                        <form>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">
+                                    Medicine Full Name
+                                </label>
+                                <input type="text" class="form-control" id="txtMedicineFullName" required placeholder="Medicine FullName">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">
+                                Brand
+                            </label>
+                            <input type="text" class="form-control" id="txtBrand" required placeholder="Brand">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">
+                                Price
+                            </label>
+                            <input type="text" class="form-control" id="txtPrice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">
+                                Quantity
+                            </label>
+                            <input type="text" class="form-control" id="txtQuantity" placeholder="Quantity">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">
+                                Expiry Date
+                            </label>
+                            <input type="text" class="form-control" id="txtExpiryDate" placeholder="Expiry Date">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">
+                                Notes
+                            </label>
+                            <input type="text" class="form-control" id="txtNotes" placeholder="txtNotes">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="header_wrap m-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button type="button" id="addButton" class="btn btn-primary">
+                            Add Medicine
+                        </button>
+                        <a href='javascript:history.go(-1)' class="btn btn-primary">
+                            Close/Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+        var currentURL = document.URL;
+        var urlQueryParameters = currentURL.split('/');
+        var id = urlQueryParameters.length > 1 ? urlQueryParameters[5] : null;
+        if (id != null && id >= 1) {
+            $(document).ready(function () {
+                fetch("http://localhost:62790/api/Medicine/" + parseInt(id, 10)).then(res => {
+                    return res.json();
+                }).then(data => populateGridData(data))
+                    .catch(error => handleException(null, error, null));
+            });
+        }
+        else {
+            $('#addButton').html('Add Medicine');
+        }
+    });
+
+    function populateGridData(data) {
+        $('#hdnMedicineId').val(data.id);
+        $("#txtMedicineFullName").val(data.medicineFullName);
+        $("#txtBrand").val(data.brand);
+        $("#txtPrice").val(data.price);
+        $("#txtQuantity").val(data.quantity);
+        $("#txtExpiryDate").val(data.expiryDate.split('T')[0]);
+        $("#txtNotes").val(data.notes);
+        $('#addButton').html('Update Medicine');
+    }
+
+    $('#addButton').click(function () {
+        if ($("#txtMedicineFullName").val().trim() == "" || $("#txtBrand").val().trim() == ""
+            || $("#txtPrice").val().trim() == "" || $("#txtQuantity").val().trim() == ""
+            || $("#txtExpiryDate").val().trim() == "" || $("#txtNotes").val().trim() == "") {
+            ShowMessage('alert-warning', 'Validation Failed', "Please Enter All The Fields")
+            return;
+        }
+        else {
+            var url = '';
+            var method = 'POST';
+            var medicineData = {
+                MedicineFullName: $('#txtMedicineFullName').val(),
+                Brand: $('#txtBrand').val(),
+                Price: parseFloat($('#txtPrice').val()),
+                Quantity: parseInt($('#txtQuantity').val(), 10),
+                ExpiryDate: new Date($('#txtExpiryDate').val()),
+                Notes: $('#txtNotes').val()
+            };
+            if ($('#hdnMedicineId').val() != null && $('#hdnMedicineId').val() > 0) {
+                method = 'PUT';
+                medicineData.Id = parseInt($('#hdnMedicineId').val());
+                url = "http://localhost:62790/api/Medicine";
+            }
+            else {
+                url = "http://localhost:62790/api/Medicine";
+            }
+            fetch(url, {
+                method: method,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(medicineData)
+            }).then(res => {
+                return res.json();
+            }).then(data => formClear(data))
+                .catch(error => console.log(error));
+        }
+    });
+
+    function medicineAddSuccess(medicineStatus) {
+        productAddRow(medicineStatus);
+        formClear();
+    }
+
+    function handleException(request, message, error) {
+        var msg = "";
+        msg += "Code: " + request.status + "\n";
+        msg += "Text: " + request.statusText + "\n";
+        if (request.responseJSON != null) {
+            msg += "Message" + request.responseJSON.Message + "\n";
+        }
+    }
+
+    function formClear(data) {
+        if (data.status == 400)
+            ShowMessage('alert-danger', 'Failed', 'A problem has occurred while submitting data')
+        else if ($('#hdnMedicineId').val() != null && $('#hdnMedicineId').val() > 0) {
+            ShowMessage('alert-success', 'Update', 'Record updated successfully');
+        }
+        else {
+            ShowMessage('alert-success', 'Success', 'Record submitted successfully');
+            $("#txtMedicineFullName").val("");
+            $("#txtBrand").val("");
+            $("#txtPrice").val("");
+            $("#txtQuantity").val("");
+            $("#txtExpiryDate").val("");
+            $("#txtNotes").val("");
+        }
+    }
+
+    function ShowMessage(cssclass, messagetype, message) {
+        $('#alert_container').append('<div id="alert_div" style="margin: 0 0.5%; -webkit-box-shadow: 3px 4px 6px #999;" class="alert fade in ' + cssclass + '"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>' + messagetype + '!</strong> <span>' + message + '</span></div>');
+        $("#alert_div").fadeTo(2000, 500);
+        setTimeout(function () {
+            $("#alert_div").fadeTo(2000, 500).slideUp(500, function () {
+                $("#alert_div").remove();
+            });
+        }, 5000);//5000=5 seconds
+    }
+</script>
+

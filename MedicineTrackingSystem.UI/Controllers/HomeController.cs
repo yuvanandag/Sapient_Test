@@ -24,6 +24,11 @@ namespace MedicineTrackingSystem.UI.Controllers
             
             return View();
         }
+        public IActionResult AddMedicine()
+        {
+
+            return View();
+        }
 
         public IActionResult Privacy()
         {

@@ -78,3 +78,5 @@ E:\A_Tech_Interview\Attended\Sapient_Test\MedicineTrackingSystem.UI\obj\Debug\ne
 E:\A_Tech_Interview\Attended\Sapient_Test\MedicineTrackingSystem.UI\obj\Debug\netcoreapp3.1\MedicineTrackingSystem.dll
 E:\A_Tech_Interview\Attended\Sapient_Test\MedicineTrackingSystem.UI\obj\Debug\netcoreapp3.1\MedicineTrackingSystem.pdb
 E:\A_Tech_Interview\Attended\Sapient_Test\MedicineTrackingSystem.UI\obj\Debug\netcoreapp3.1\MedicineTrackingSystem.genruntimeconfig.cache
+E:\A_Tech_Interview\Attended\Sapient_Test\MedicineTrackingSystem.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\AddMedicine.cshtml.g.cs
+E:\A_Tech_Interview\Attended\Sapient_Test\MedicineTrackingSystem.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\NotFound.cshtml.g.cs

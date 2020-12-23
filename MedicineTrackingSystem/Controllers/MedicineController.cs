@@ -3,6 +3,7 @@ using MedicineTrackingSystem.Repository;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace MedicineTrackingSystem.API.Controllers
@@ -25,7 +26,21 @@ namespace MedicineTrackingSystem.API.Controllers
             {
                 var result = await medicineRepository.GetAllMedicinesAsync();
                 if (result.IsSuccess)
-                    return Ok(result.Medicines);
+                {
+                    var medicineList = result.Medicines;
+                    var finalMedicineList = medicineList.Select(a => new
+                    {
+                        Id = a.Id,
+                        MedicineFullName = a.MedicineFullName,
+                        Brand = a.Brand,
+                        Price = a.Price,
+                        Quantity = a.Quantity,
+                        ExpiryDate = a.ExpiryDate,
+                        Notes = a.Notes,
+                        IsRedBackGround = (DateTime.Now - Convert.ToDateTime(a.ExpiryDate).Date).Days > 30 ? true : false
+                    });
+                    return Ok(finalMedicineList);
+                }
                 return NotFound(result.ErrorMessage);
 
             }
@@ -70,8 +85,8 @@ namespace MedicineTrackingSystem.API.Controllers
         }
 
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateMedicineAsync(int id, [FromBody] MedicineAttribute medicineAttributes)
+        [HttpPut]
+        public async Task<IActionResult> UpdateMedicineAsync(MedicineAttribute medicineAttributes)
         {
             try
             {
